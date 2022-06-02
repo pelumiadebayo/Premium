@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Services\" />
+    <None Remove="Interfaces\" />
+    <None Remove="AutoMapper" />
+    <None Remove="Mapping\" />
+    <None Remove="Services\Requisitions\" />
+    <None Remove="Services\Enquiries\" />
+    <None Remove="System.DirectoryServices.Protocols" />
+    <None Remove="Oracle.ManagedDataAccess.Core" />
+    <None Remove="Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Mapping\" />
+    <Folder Include="Services\Requisitions\" />
+    <Folder Include="Services\Enquiries\" />
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IntranetApi.CoreObjects\IntranetApi.CoreObjects.csproj" />
+    <ProjectReference Include="..\AppRepository\IntranetApi.Repository.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="System.DirectoryServices.Protocols" Version="6.0.1" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.61" />
+  </ItemGroup>
+</Project>
